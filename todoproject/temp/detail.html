@@ -1,0 +1,29 @@
+
+
+{%  extends 'base.html' %}
+
+
+{% block content %}
+
+
+
+
+    <div class=" shadow card">
+                <div class="card-body" style=" font-weight: bold;
+                                              padding-top: 5px;
+                                               font-family: Helvetica Neue, Arial, sans-serif;
+                                                 font-size: 21px;    text-align:center ">
+                    <h4 class="card-title" style=" font-size: 31px;  font-weight: bold;  color: white;  background-color:  #294872; ">Task :  {{i.name}}</h4>
+                    <p>priority no: {{i.priority}}</p>
+                    <p>{{i.time}}</p>
+                    <p>{{i.date}}</p>
+
+
+                        <a class="btn btn-danger" href="{% url 'todoapp:delete' i.id %}">Done</a>
+                        <a class="btn btn-success" href="{% url 'todoapp:update' i.id %}">Edit</a>
+                    </div>
+
+        </div>
+
+
+{% endblock %}
